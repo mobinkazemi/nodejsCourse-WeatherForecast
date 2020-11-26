@@ -6,6 +6,7 @@ const coordinateFinder = require('./utils/geocode');
 const forecast = require('./utils/forecast');
 
 const app = express();
+const port = process.env.PORT || 3000;
 const path_publicDirectory = path.join(__dirname, '../public');
 const path_publicDirectoryStyles = path.join(__dirname, '../public/css');
 const path_helpPage = path.join(path_publicDirectory, '/help.html');
@@ -94,6 +95,6 @@ app.get('*', (req, res) => {
 
 
 
-app.listen(3000, () => {
-    console.log('Your app is listening on port 3000');
+app.listen(prot, () => {
+    console.log('Your app is listening on port ' + port);
 });
