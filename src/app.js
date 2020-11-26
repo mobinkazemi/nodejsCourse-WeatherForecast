@@ -95,6 +95,6 @@ app.get('*', (req, res) => {
 
 
 
-app.listen(prot, () => {
+app.listen(port, () => {
     console.log('Your app is listening on port ' + port);
 });
